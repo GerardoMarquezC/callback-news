@@ -3,7 +3,7 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 handlers:
-  - url: /_next/static
+  - url: /(.+)
   static_files: dist/\1
   upload: dist/(.*)
 - url: /
