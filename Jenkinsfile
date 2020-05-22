@@ -34,8 +34,9 @@ pipeline {
 					echo "deploy stage";
 					 gcloud config set project ${GOOGLE_PROJECT_ID};
 					 gcloud auth activate-service-account --key-file ${GOOGLE_SERVICE_ACCOUNT_KEY};
-					 
+					 gcloud app deploy --version=v01;
 					 gcloud config list;
+                     echo "Deployed to GCP"
 				"""
             }
         }
