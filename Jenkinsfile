@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs '>=10.13.0'
+        nodejs 'NodeJS 14.3.0'
     }
     stages {
         stage('init') {
