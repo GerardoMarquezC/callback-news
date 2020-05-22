@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production server.js"
+    "start": "next start",
+    "gcp-build": "next build && next start -port 8080"
   },
   "repository": {
     "type": "git",
