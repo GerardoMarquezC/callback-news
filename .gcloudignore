@@ -13,4 +13,6 @@
 .git 
 .gitignore
 
-- ^(?!dist)
+node_modules/
+.next/
+component/
