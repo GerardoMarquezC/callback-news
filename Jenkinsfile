@@ -5,18 +5,18 @@ pipeline {
         stage('init') {
             steps {
                 sh 'node -v'
-                sh 'ls'
-                echo 'init..'
+                sh 'npm install'
+
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'npm run test'
             }
         }
         stage('Build') {
             steps {
                 echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
             }
         }
         stage('Deploy') {
