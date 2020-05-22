@@ -12,9 +12,6 @@
 # below:
 .git
 .gitignore
-
+.next
 # Next.js transient files
 node_modules/
-
-# Next.js source code
-/pages/

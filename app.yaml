@@ -1,7 +1,6 @@
 # [START runtime]
 runtime: nodejs10
 
-service: default
 handlers:
 - url: /.*
-  script: auto
+  script: server.js
