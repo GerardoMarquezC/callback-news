@@ -5,10 +5,10 @@ threadsafe: yes
 # [END runtime]
 handlers:
 - url: /(.+)
-  static_files: out/\1
-  upload: out/(.*)
+  static_files: dist/\1
+  upload: dist/(.*)
 - url: /
-  static_files: out/index.html
-  upload: out/index.html
+  static_files: dist/index.html
+  upload: dist/index.html
 skip_files:
-- ^(?!out)  # Skip any files not in the dist folder
+- ^(?!dist)  # Skip any files not in the dist folder
