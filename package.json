@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "next build && next export --outdir dist/",
+    "build": "next build",
     "start": "next start",
-    "gcp-build": "next build"
+    "gcp-build": "next build && next start -p 80"
   },
   "repository": {
     "type": "git",
