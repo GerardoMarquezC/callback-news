@@ -24,7 +24,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'npm run build '
+                sh 'npm run build'
+                sh 'ls'
             }
         }
         stage('Deploy') {
@@ -34,7 +35,6 @@ pipeline {
 					echo "deploy stage";
 					 gcloud config set project ${GOOGLE_PROJECT_ID};
 					 gcloud auth activate-service-account --key-file ${GOOGLE_SERVICE_ACCOUNT_KEY};
-                     gcloud config set gcloudignore/enabled false
 					 gcloud app deploy app.yaml;
 					 gcloud config list;
                      echo "Deployed to GCP"
