@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GOOGLE_PROJECT_ID = 'callback-news';
+        GOOGLE_PROJECT_ID = 'callback-demons';
         GOOGLE_SERVICE_ACCOUNT_KEY = credentials('google_cloud');
     }
     tools {
