@@ -1,7 +1,7 @@
 # [START runtime]
 runtime: python27
 api_version: 1
-threadsafe: true
+threadsafe: yes
 # [END runtime]
 handlers:
 - url: /(.+)
