@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('init') {
             steps {
+                sh 'node -v'
                 echo 'init..'
             }
         }
