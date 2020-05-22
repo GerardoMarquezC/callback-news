@@ -35,7 +35,8 @@ pipeline {
 					echo "deploy stage";
 					 gcloud config set project ${GOOGLE_PROJECT_ID};
 					 gcloud auth activate-service-account --key-file ${GOOGLE_SERVICE_ACCOUNT_KEY};
-					 gcloud app deploy app.yaml --verbosity=info;
+                     gcloud config set gcloudignore/enabled true;
+					 gcloud app deploy app.yaml;
 					 gcloud config list;
                      echo "Deployed to GCP"
 				"""
