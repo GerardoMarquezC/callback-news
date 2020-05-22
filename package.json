@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export --outdir dist/",
-    "start": "next start"
+    "start": "next start",
+    "gcp-build": "next build"
   },
   "repository": {
     "type": "git",
