@@ -4,7 +4,7 @@ api_version: 1
 threadsafe: yes
 handlers:
 - url: /_next/static
-  static_files: dist/\1
+  static_files: dist/
   upload: dist/(.*)
 - url: /
   static_files: dist/index.html
