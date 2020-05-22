@@ -1,2 +1,12 @@
 # [START runtime]
 runtime: nodejs10
+handlers:
+  - url: /_next/static
+    static_dir: .next/static
+    secure: always
+  - url: /static
+    static_dir: static
+    secure: always
+  - url: /.*
+    secure: always
+    script: auto
