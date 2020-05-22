@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    tools {
+        nodejs '>=10.13.0'
+    }
     stages {
         stage('init') {
             steps {
