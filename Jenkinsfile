@@ -31,14 +31,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh """
-					#!/bin/bash 
-					echo "deploy stage";
-					 gcloud config set project ${GOOGLE_PROJECT_ID};
-					 gcloud auth activate-service-account --key-file ${GOOGLE_SERVICE_ACCOUNT_KEY};
-                     gcloud config set gcloudignore/enabled true;
-					 gcloud app deploy app.yaml;
-					 gcloud config list;
-                     echo "Deployed to GCP"
+					#!/bin/bash
+					ssh gerardo_marquez_carmona@callback-news.com -p 2222 'ls'
+					
 				"""
             }
         }
