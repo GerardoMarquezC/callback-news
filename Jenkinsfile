@@ -20,19 +20,11 @@ pipeline {
                 sh 'npm run test'
             }
         }
-        stage('Build') {
-            steps {
-                sh 'npm run build'
-            }
-        }
         stage('Deploy') {
             steps {
                 sh """
 					#!/bin/bash
-					ssh gerardo_marquez_carmona@callback-news.com -p 2222 
-                    cd callback-news
-                    npm install
-                    npm run build 
+					ssh gerardo_marquez_carmona@callback-news.com -p 2222  'cd callback-news npm install npm run build'
 					
 				"""
             }
