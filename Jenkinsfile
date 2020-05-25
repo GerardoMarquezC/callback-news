@@ -11,8 +11,6 @@ pipeline {
         stage('init') {
             steps {
                 sh 'node -v'
-                echo "this is the project id environment "+GOOGLE_PROJECT_ID;
-                echo "THis is the credentails:${GOOGLE_SERVICE_ACCOUNT_KEY}";
                 sh 'npm install'
 
             }
@@ -25,14 +23,15 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm run build'
-                sh 'ls'
             }
         }
         stage('Deploy') {
             steps {
                 sh """
 					#!/bin/bash
-					ssh gerardo_marquez_carmona@callback-news.com -p 2222 'ls' 
+					ssh gerardo_marquez_carmona@callback-news.com -p 2222 
+                    'cd callback-news
+                     npm build' 
 					
 				"""
             }
