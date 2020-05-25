@@ -30,8 +30,9 @@ pipeline {
                 sh """
 					#!/bin/bash
 					ssh gerardo_marquez_carmona@callback-news.com -p 2222 
-                    'cd callback-news
-                     npm build' 
+                    cd callback-news
+                    npm install
+                    npm run build 
 					
 				"""
             }
