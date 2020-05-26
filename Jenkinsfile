@@ -24,7 +24,8 @@ pipeline {
             steps {
                 sh """
 					#!/bin/bash
-					ssh gerardo_marquez_carmona@callback-news.com -p 2222	'cd callback-news && pm2 stop next && git pull && npm install && npm run build  && pm2 start next'
+					ssh gerardo_marquez_carmona@callback-news.com -p 2222	'cd callback-news && git pull && sudo npm install && sudo npm run build
+                    '
 				"""
                 sh """
 					#!/bin/bash
